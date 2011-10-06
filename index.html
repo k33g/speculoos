@@ -1,16 +1,17 @@
-#SpeculOOs ?
+<!DOCTYPE HTML PUBLIC>
+<html>
+<head>
+    <title>SpeculOOs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
 
-SpeculOOs is just a very simple Javascript Class notation, but ... CoffeeScript compliant ! 
+</body>
 
-You do not want to learn to coffeescript today, but it's interesting that your codes are compatible with coffeescript, if you finally decide to take the plunge. For example, your coffeescript classes will be able to inherit from your javascript classes
-
-##Use
-
-1- declare `speculoos.js` (`see index.html`)
-2- write a class(es) : 
-
-```javascript
-
+<script src="js/coffee-script.js" type="text/javascript" charset="utf-8"></script>
+<script src="speculoos.js"></script>
+<script>
+	/* this is javascript */
 	var Thing = Class({
 		constructor : function Thing (kind) {
 			this.kind = kind;
@@ -33,20 +34,13 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 		$HumanCounter : 0,
 		$getHumanCounter : function() { return Human.HumanCounter; }
 	});
-	
-```
-###Use with Javascript
-
-```javascript
 
 	var bob = new Human('Bob');
 	console.log(bob, bob.toString(), Human.getHumanCounter(), Human.HumanCounter);
 
-```
-###Use with Coffeescript
-
-```coffeescript
-
+</script>
+<script type="text/coffeescript">
+	### this is coffeescript ###
 	class SuperHeroe extends Human
 		constructor:(name)->
 			super name
@@ -54,7 +48,7 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 	superMan = new SuperHeroe 'Clark Kent'
 
 	console.log superMan, superMan.toString(), SuperHeroe.getHumanCounter(), Human.HumanCounter
+	
+</script>
 
-```
-
-... so simple ! No ?
+</html>
