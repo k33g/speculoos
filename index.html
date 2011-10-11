@@ -15,6 +15,10 @@
 	var Thing = Class({
 		constructor : function Thing (kind) {
 			this.kind = kind;
+		},
+		
+		sayHello : function() {
+			console.log("Hello !");
 		}
 	})
 
@@ -30,6 +34,13 @@
 		toString : function() {
 			return "Hello " + this.name;
 		},
+		
+		sayHello : function() {
+			/* Call Parent method */
+			Human.__super__.sayHello.call(this);
+			console.log("I'm "+this.name);
+		},
+		
 		/* Static Members */
 		$HumanCounter : 0,
 		$getHumanCounter : function() { return Human.HumanCounter; }
@@ -37,6 +48,7 @@
 
 	var bob = new Human('Bob');
 	console.log(bob, bob.toString(), Human.getHumanCounter(), Human.HumanCounter);
+	bob.sayHello();
 
 </script>
 <script type="text/coffeescript">
@@ -45,9 +57,14 @@
 		constructor:(name)->
 			super name
 
+		sayHello:->
+			super
+			console.log "And i'm a superheroe"
+
 	superMan = new SuperHeroe 'Clark Kent'
 
 	console.log superMan, superMan.toString(), SuperHeroe.getHumanCounter(), Human.HumanCounter
+	superMan.sayHello()
 	
 </script>
 
