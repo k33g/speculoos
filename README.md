@@ -15,6 +15,11 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 	var Thing = Class({
 		constructor : function Thing (kind) {
 			this.kind = kind;
+			
+			/* private variable with getter and setter */
+			var _nickName = '???';
+			this.getNickName = function () { return _nickName; }
+			this.setNickName = function (nickName) { _nickName = nickName; }
 		},
 	
 		sayHello : function() {
@@ -67,10 +72,11 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 
 		sayHello:->
 			super
-			console.log "And i'm a superheroe"
+			console.log "And i'm a superheroe : #{@getNickName()}"
 
 	superMan = new SuperHeroe 'Clark Kent'
-
+	superMan.setNickName "Super Man"
+	
 	console.log superMan, superMan.toString(), SuperHeroe.getHumanCounter(), Human.HumanCounter
 	superMan.sayHello()
 
