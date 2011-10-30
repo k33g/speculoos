@@ -28,7 +28,7 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 	})
 
 	var Human = Class({
-		extends : Thing, /* inheritance */
+		Extends : Thing, /* inheritance */
 		constructor : function Human (name) {
 			this.name = name;
 			/* Call Parent constructor */

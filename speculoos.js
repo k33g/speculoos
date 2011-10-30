@@ -1,10 +1,11 @@
+/* by @k33g_org */
 (function() {
 	window.Class = (function() {
 		function Class(definition) {
 			/* from CoffeeScript */
 			var __hasProp = Object.prototype.hasOwnProperty
 			, m, F;
-			this.extends = function(child, parent) {
+			this.Extends = function(child, parent) {
 				for (m in parent) {
 					if (__hasProp.call(parent, m)) child[m] = parent[m];
 				}
@@ -18,8 +19,8 @@
 				F = definition.constructor;
 			} else { F = {}; }
 			/* inheritance */
-			if(definition.extends) {
-				this.extends(F, definition.extends)
+			if(definition.Extends) {
+				this.Extends(F, definition.Extends)
 			}
 			for(m in definition) {
 				if(m != 'constructor' && m != 'extends') { 
