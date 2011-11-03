@@ -6,8 +6,8 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 
 ##Use
 
-1- declare `speculoos.js` (`see index.html`)
-2- write a class(es) : 
+- declare `speculoos.js` (`see index.html`)
+- write a class(es) : 
 
 ```javascript
 
@@ -83,3 +83,11 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 ```
 
 ... so simple ! No ? ...
+
+##License
+
+
+
+SpeculOOs is available under the terms of the [MIT-License](http://en.wikipedia.org/wiki/MIT_License#License_terms).
+
+Copyright 2011, Philippe Charrière
