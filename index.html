@@ -8,8 +8,9 @@
 
 </body>
 
+<!--<script src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js" type="text/javascript" charset="utf-8"></script>-->
 <script src="js/coffee-script.js" type="text/javascript" charset="utf-8"></script>
-<script src="speculoos.js"></script>
+<script src="speculoos.min.js"></script>
 <script>
 	/* this is javascript */
 	var Thing = Class({
@@ -56,22 +57,25 @@
 	console.log(bob, bob.toString(), Human.getHumanCounter(), Human.HumanCounter);
 	bob.sayHello();
 
+    var Animal = Class({
+        constructor:function Animal(){}
+    });
 </script>
 <script type="text/coffeescript">
 	### this is coffeescript ###
-	class SuperHeroe extends Human
+	class SuperHero extends Human
 		constructor:(name)->
 			super name
 
 		sayHello:->
 			super
-			console.log "And i'm a superheroe : #{@getNickName()}"
+			console.log "And i'm a superhero : #{@getNickName()}"
 
-	superMan = new SuperHeroe 'Clark Kent'
+	superMan = new SuperHero 'Clark Kent'
 	
 	superMan.setNickName "Super Man"
 
-	console.log superMan, superMan.toString(), SuperHeroe.getHumanCounter(), Human.HumanCounter
+	console.log superMan, superMan.toString(), SuperHero.getHumanCounter(), Human.HumanCounter
 	superMan.sayHello()
 	
 </script>
