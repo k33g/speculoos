@@ -66,18 +66,18 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 ```coffeescript
 
 	### this is coffeescript ###
-	class SuperHeroe extends Human
+	class SuperHero extends Human
 		constructor:(name)->
 			super name
 
 		sayHello:->
 			super
-			console.log "And i'm a superheroe : #{@getNickName()}"
+			console.log "And i'm a superhero : #{@getNickName()}"
 
-	superMan = new SuperHeroe 'Clark Kent'
+	superMan = new SuperHero 'Clark Kent'
 	superMan.setNickName "Super Man"
 	
-	console.log superMan, superMan.toString(), SuperHeroe.getHumanCounter(), Human.HumanCounter
+	console.log superMan, superMan.toString(), SuperHero.getHumanCounter(), Human.HumanCounter
 	superMan.sayHello()
 
 ```
