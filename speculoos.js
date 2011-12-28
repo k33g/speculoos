@@ -1,29 +1,30 @@
 /* by @k33g_org */
 (function() {
+
 	window.Class = (function() {
 		function Class(definition) {
 			/* from CoffeeScript */
 			var __hasProp = Object.prototype.hasOwnProperty
 			, m, F;
-			this.Extends = function(child, parent) {
+			this["extends"] = function(child, parent) {
 				for (m in parent) {
 					if (__hasProp.call(parent, m)) child[m] = parent[m];
 				}
 				function ctor() { this.constructor = child; }
 				ctor.prototype = parent.prototype;
 			  	child.prototype = new ctor;
-			  	child.__super__ = parent.prototype;
+			  	child.__super__ = child["super"] = parent.prototype;
 				return child;
 			}
 			if(definition.constructor) {
 				F = definition.constructor;
 			} else { F = {}; }
 			/* inheritance */
-			if(definition.Extends) {
-				this.Extends(F, definition.Extends)
+			if(definition["extends"]) {
+				this["extends"](F, definition["extends"])
 			}
 			for(m in definition) {
-				if(m != 'constructor' && m != 'extends') { 
+				if(m != 'constructor' && m != 'extends') {
 					if(m[0] != '$') {
 						F.prototype[m] = definition[m];
 					} else { /* static members */
@@ -31,6 +32,7 @@
 					}
 				}
 			}
+			
 			return F;
 		}
 		return Class;

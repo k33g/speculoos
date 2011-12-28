@@ -13,7 +13,7 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 
 	/* this is javascript */
 	var Thing = Class({
-		constructor : function Thing (kind) {
+		constructor : function Thing (kind) { /* you have to name the constructor */
 			this.kind = kind;
 			
 			/* private variable with getter and setter */
@@ -28,11 +28,11 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 	})
 
 	var Human = Class({
-		Extends : Thing, /* inheritance */
+		extends : Thing, /* inheritance */
 		constructor : function Human (name) {
 			this.name = name;
 			/* Call Parent constructor */
-			Human.__super__.constructor.call(this, "I AM A HUMAN");
+			Human.super.constructor.call(this, "I AM A HUMAN");
 			Human.HumanCounter += 1;
 		},
 
@@ -42,7 +42,7 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 	
 		sayHello : function() {
 			/* Call Parent method */
-			Human.__super__.sayHello.call(this);
+			Human.super.sayHello.call(this);
 			console.log("I'm "+this.name);
 		},
 	

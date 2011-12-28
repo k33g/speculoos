@@ -8,7 +8,7 @@
 
 </body>
 
-<script src="speculoos.min.js"></script>
+<script src="speculoos.js"></script>
 <script>
 
 
@@ -50,9 +50,9 @@
     bob.rightHand.take("a glass");
 
     var SuperHero = Class({
-        Extends : Human,
+        extends : Human,
         constructor : function SuperHero(name) {
-            SuperHero.__super__.constructor.call(this, name);
+            SuperHero.super.constructor.call(this, name);
         }
     });
 

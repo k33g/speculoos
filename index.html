@@ -10,9 +10,10 @@
 
 <!--<script src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js" type="text/javascript" charset="utf-8"></script>-->
 <script src="js/coffee-script.js" type="text/javascript" charset="utf-8"></script>
-<script src="speculoos.min.js"></script>
+<script src="speculoos.js"></script>
 <script>
 	/* this is javascript */
+	
 	var Thing = Class({
 		constructor : function Thing (kind) {
 			this.kind = kind;
@@ -22,6 +23,8 @@
 			this.getNickName = function () { return _nickName; }
 			this.setNickName = function (nickName) { _nickName = nickName; }
 			
+			console.log(kind);
+			
 		},
 		
 		sayHello : function() {
@@ -30,11 +33,12 @@
 	})
 
 	var Human = Class({
-		Extends : Thing, /* inheritance */
+		extends : Thing, /* inheritance */
 		constructor : function Human (name) {
 			this.name = name;
 			/* Call Parent constructor */
-			Human.__super__.constructor.call(this, "I AM A HUMAN");
+			Human.super.constructor.call(this, this.constructor.name);
+
 			Human.HumanCounter += 1;
 		},
 
@@ -44,7 +48,7 @@
 		
 		sayHello : function() {
 			/* Call Parent method */
-			Human.__super__.sayHello.call(this);
+			Human.super.sayHello.call(this);
 			console.log("I'm "+this.name);
 		},
 		
