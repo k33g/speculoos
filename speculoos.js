@@ -17,11 +17,14 @@
 			  	child.__super__ = child["super"] = parent.prototype;
 				return child;
 			}
+
             if(definition.constructor.name === "Object") {
-                F = {};
+                F = function(){};
             } else {
                 F = definition.constructor;
             }
+
+
 			/* inheritance */
 			if(definition["extends"]) {
 				this["extends"](F, definition["extends"])
@@ -35,7 +38,7 @@
 					}
 				}
 			}
-			
+
 			return F;
 		}
 		return Class;
