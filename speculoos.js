@@ -6,6 +6,7 @@
 			/* from CoffeeScript */
 			var __hasProp = Object.prototype.hasOwnProperty
 			, m, F;
+
 			this["extends"] = function(child, parent) {
 				for (m in parent) {
 					if (__hasProp.call(parent, m)) child[m] = parent[m];
@@ -16,9 +17,11 @@
 			  	child.__super__ = child["super"] = parent.prototype;
 				return child;
 			}
-			if(definition.constructor) {
-				F = definition.constructor;
-			} else { F = {}; }
+            if(definition.constructor.name === "Object") {
+                F = {};
+            } else {
+                F = definition.constructor;
+            }
 			/* inheritance */
 			if(definition["extends"]) {
 				this["extends"](F, definition["extends"])
