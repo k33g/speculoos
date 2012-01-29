@@ -8,13 +8,13 @@
 
 </body>
 
-<script src="speculoos.js"></script>
+<script src="../speculoos.js"></script>
 <script>
 
 
-	var Human = Class({
+	var Human = speculoos.Class({
 
-        Hand:Class({
+        Hand:speculoos.Class({
             constructor : function Hand (which_one) {
                 this.whichOne = which_one;
             },
@@ -49,7 +49,7 @@
     bob.leftHand.take("a book");
     bob.rightHand.take("a glass");
 
-    var SuperHero = Class({
+    var SuperHero = speculoos.Class({
         extends : Human,
         constructor : function SuperHero(name) {
             SuperHero.super.constructor.call(this, name);

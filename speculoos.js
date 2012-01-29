@@ -1,7 +1,14 @@
 /* by @k33g_org */
-(function() {
 
-	window.Class = (function() {
+var root = this;
+
+if (typeof exports === 'undefined') {
+    root.speculoos = root.speculoos || {};
+}
+
+(function(speculoos) {
+
+	var Class = (function() {
 		function Class(definition) {
 			/* from CoffeeScript */
 			var __hasProp = Object.prototype.hasOwnProperty
@@ -43,4 +50,8 @@
 		}
 		return Class;
 	})();
-}).call(this);
+
+    speculoos.Class = Class;
+
+})(root.speculoos || exports);
+

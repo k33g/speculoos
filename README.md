@@ -1,18 +1,18 @@
 #SpeculOOs ?
 
-SpeculOOs is just a very simple Javascript Class notation, but ... CoffeeScript compliant ! 
+SpeculOOs is just a very simple Javascript Class notation, but ... CoffeeScript compliant ! (browser and nodejs)
 
 You do not want to learn to coffeescript today, but it's interesting that your codes are compatible with coffeescript, if you finally decide to take the plunge. For example, your coffeescript classes will be able to inherit from your javascript classes
 
 ##Use
 
-- declare `speculoos.js` (`see index.html`)
+- declare `speculoos.js`, if browser : `<script src="speculoos.js"></script>`, if nodejs : `var speculoos = require("./speculoos.js");`
 - write a class(es) : 
 
 ```javascript
 
 	/* this is javascript */
-	var Thing = Class({
+	var Thing = speculoos.Class({
 		constructor : function Thing (kind) { /* you have to name the constructor */
 			this.kind = kind;
 			
@@ -27,7 +27,7 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 		}
 	})
 
-	var Human = Class({
+	var Human = speculoos.Class({
 		extends : Thing, /* inheritance */
 		constructor : function Human (name) {
 			this.name = name;
