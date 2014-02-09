@@ -61,6 +61,9 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 	bob.sayHello();
 
 ```
+
+##Prepare Future
+
 ###Use with Coffeescript
 
 ```coffeescript
@@ -80,6 +83,25 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 	console.log superMan, superMan.toString(), SuperHero.getHumanCounter(), Human.HumanCounter
 	superMan.sayHello()
 
+```
+
+###Use with TypeScript
+
+```typescript
+	class SuperHero extends Human {
+	    constructor(name: string, nickName: string) {
+	        this.nickName = nickName;
+	        super(name);
+	    }
+	
+	    sayHello() {
+	        super.sayHello();
+	        console.log("I am "+this.nickName)
+	    }
+	
+	}
+	var peter = new SuperHero("Peter Parker", "SpiderMan");
+	peter.sayHello();
 ```
 
 ... so simple ! No ? ...
