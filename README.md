@@ -112,4 +112,4 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 
 SpeculOOs is available under the terms of the [MIT-License](http://en.wikipedia.org/wiki/MIT_License#License_terms).
 
-Copyright 2011, Philippe Charrière
+Copyright 2014-2015, Philippe Charrière
