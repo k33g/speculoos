@@ -1,0 +1,20 @@
+{
+  "name": "traceur",
+  "main": "./traceur.js",
+  "ignore": [
+    "node_modules",
+    "Gruntfile.js",
+    "*.json",
+    ".*"
+  ],
+  "homepage": "https://github.com/k33g/component-traceur",
+  "_release": "98c5d10812",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "98c5d108125a639c229dac2029cdc67f40b8225b"
+  },
+  "_source": "git://github.com/k33g/component-traceur.git",
+  "_target": "master",
+  "_originalSource": "k33g/component-traceur"
+}

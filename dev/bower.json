@@ -10,5 +10,8 @@
   "keywords": [
     "class"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "traceur": "k33g/component-traceur#master"
+  }
 }

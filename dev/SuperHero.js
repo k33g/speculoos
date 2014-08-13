@@ -2,8 +2,8 @@
 
 class SuperHero extends Human {
   constructor(name, nickName) {
-    this.nickName = nickName;
     super(name);
+    this.setNickName(nickName);
   }
 
   sayHello() {
@@ -13,4 +13,5 @@ class SuperHero extends Human {
 
 }
 var peter = new SuperHero("Peter Parker", "SpiderMan");
+
 peter.sayHello();

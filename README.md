@@ -10,56 +10,53 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 - write a class(es) : 
 
 ```javascript
+/* this is javascript */
+var Thing = speculoos.Class({
+    constructor : function Thing (kind) { /* you have to name the constructor */
+        this.kind = kind;
+        
+        /* private variable with getter and setter */
+        var _nickName = '???';
+        this.getNickName = function () { return _nickName; }
+        this.setNickName = function (nickName) { _nickName = nickName; }
+    },
 
-	/* this is javascript */
-	var Thing = speculoos.Class({
-		constructor : function Thing (kind) { /* you have to name the constructor */
-			this.kind = kind;
-			
-			/* private variable with getter and setter */
-			var _nickName = '???';
-			this.getNickName = function () { return _nickName; }
-			this.setNickName = function (nickName) { _nickName = nickName; }
-		},
-	
-		sayHello : function() {
-			console.log("Hello !");
-		}
-	})
+    sayHello : function() {
+        console.log("Hello !");
+    }
+})
 
-	var Human = speculoos.Class({
-		extends : Thing, /* inheritance */
-		constructor : function Human (name) {
-			this.name = name;
-			/* Call Parent constructor */
-			Human.super.constructor.call(this, "I AM A HUMAN");
-			Human.HumanCounter += 1;
-		},
+var Human = speculoos.Class({
+    extends : Thing, /* inheritance */
+    constructor : function Human (name) {
+        this.name = name;
+        /* Call Parent constructor */
+        Human.super.constructor.call(this, "I AM A HUMAN");
+        Human.HumanCounter += 1;
+    },
 
-		toString : function() {
-			return "Hello " + this.name;
-		},
-	
-		sayHello : function() {
-			/* Call Parent method */
-			Human.super.sayHello.call(this);
-			console.log("I'm "+this.name);
-		},
-	
-		/* Static Members */
-		$HumanCounter : 0,
-		$getHumanCounter : function() { return Human.HumanCounter; }
-	});
-	
+    toString : function() {
+        return "Hello " + this.name;
+    },
+
+    sayHello : function() {
+        /* Call Parent method */
+        Human.super.sayHello.call(this);
+        console.log("I'm "+this.name);
+    },
+
+    /* Static Members */
+    $HumanCounter : 0,
+    $getHumanCounter : function() { return Human.HumanCounter; }
+});
 ```
+
 ###Use with Javascript
 
 ```javascript
-
-	var bob = new Human('Bob');
-	console.log(bob, bob.toString(), Human.getHumanCounter(), Human.HumanCounter);
-	bob.sayHello();
-
+var bob = new Human('Bob');
+console.log(bob, bob.toString(), Human.getHumanCounter(), Human.HumanCounter);
+bob.sayHello();
 ```
 
 ##Prepare Future
@@ -67,41 +64,39 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 ###Use with Coffeescript
 
 ```coffeescript
+### this is coffeescript ###
+class SuperHero extends Human
+    constructor:(name)->
+        super name
 
-	### this is coffeescript ###
-	class SuperHero extends Human
-		constructor:(name)->
-			super name
+    sayHello:->
+        super
+        console.log "And i'm a superhero : #{@getNickName()}"
 
-		sayHello:->
-			super
-			console.log "And i'm a superhero : #{@getNickName()}"
+superMan = new SuperHero 'Clark Kent'
+superMan.setNickName "Super Man"
 
-	superMan = new SuperHero 'Clark Kent'
-	superMan.setNickName "Super Man"
-	
-	console.log superMan, superMan.toString(), SuperHero.getHumanCounter(), Human.HumanCounter
-	superMan.sayHello()
-
+console.log superMan, superMan.toString(), SuperHero.getHumanCounter(), Human.HumanCounter
+superMan.sayHello()
 ```
 
 ###Use with TypeScript
 
 ```typescript
-	class SuperHero extends Human {
-	    constructor(name: string, nickName: string) {
-	        this.nickName = nickName;
-	        super(name);
-	    }
-	
-	    sayHello() {
-	        super.sayHello();
-	        console.log("I am "+this.nickName)
-	    }
-	
-	}
-	var peter = new SuperHero("Peter Parker", "SpiderMan");
-	peter.sayHello();
+class SuperHero extends Human {
+    constructor(name: string, nickName: string) {
+        this.nickName = nickName;
+        super(name);
+    }
+    
+    sayHello() {
+        super.sayHello();
+        console.log("I am "+this.nickName)
+    }
+
+}
+var peter = new SuperHero("Peter Parker", "SpiderMan");
+peter.sayHello();
 ```
 
 ###Use with ECMAScript 6
@@ -109,8 +104,8 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 ```javascript
 class SuperHero extends Human {
   constructor(name, nickName) {
-    this.nickName = nickName;
     super(name);
+    this.setNickName(nickName);
   }
 
   sayHello() {
@@ -120,6 +115,7 @@ class SuperHero extends Human {
 
 }
 var peter = new SuperHero("Peter Parker", "SpiderMan");
+
 peter.sayHello();
 ```
 

@@ -1,0 +1,24 @@
+{
+  "name": "speculoos",
+  "description": "Simple Javascript Class notation, CoffeeScript, TypeScript and ECMAScript 6 compliant.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/k33g/speculoos",
+  "scripts": {
+    "build": "npm install && grunt"
+  },
+  "author": {
+    "name": "K33G_ORG",
+    "email": "ph.charriere@gmail.com",
+    "url": "https://github.com/k33g"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k33g/speculoos.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-cli": "^0.1.13"
+  }
+}

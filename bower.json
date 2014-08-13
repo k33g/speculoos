@@ -1,0 +1,12 @@
+{
+  "name": "speculoos",
+  "version": "0.0.0",
+  "main": "./speculoos.js",
+  "ignore": [
+    "node_modules",
+    "Gruntfile.js",
+    "*.json",
+    "*.html",
+    ".*"
+  ]
+}

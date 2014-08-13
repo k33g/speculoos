@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC>
+<html>
+<head>
+    <title>SpeculOOs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<script src="lib/speculoos.js"></script>
+<script src="bower_components/traceur/traceur.min.js"></script>
+<script src="Human.js"></script>
+<script>
+  traceur.options.experimental = true;
+</script>
+<script>
+  System.import('./SuperHero').catch(function(e){console.log(e);});
+</script>
+
+</body>
+
+</html>
