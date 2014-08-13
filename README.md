@@ -1,8 +1,8 @@
 #SpeculOOs ?
 
-SpeculOOs is just a very simple Javascript Class notation, but ... CoffeeScript compliant ! (browser and nodejs)
+SpeculOOs is just a very simple Javascript Class notation, but ... CoffeeScript, TypeScript, ECMAScript 6 compliant ! (browser and nodejs)
 
-You do not want to learn to coffeescript today, but it's interesting that your codes are compatible with coffeescript, if you finally decide to take the plunge. For example, your coffeescript classes will be able to inherit from your javascript classes
+You do not want to learn to CoffeeScript (or TypeScript oe ECMAScript 6) today, but it's interesting that your codes are compatible with them, if you finally decide to take the plunge. For example, your CoffeeScript (or TypeScript oe ECMAScript 6) classes will be able to inherit from your javascript classes.
 
 ##Install
 
