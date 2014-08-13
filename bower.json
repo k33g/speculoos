@@ -4,6 +4,7 @@
   "main": "./speculoos.js",
   "ignore": [
     "node_modules",
+    "dev",
     "Gruntfile.js",
     "*.json",
     "*.html",
