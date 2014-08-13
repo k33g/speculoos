@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC>
+<html>
+<head>
+    <title>SpeculOOs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+</body>
+
+<script src="lib/speculoos.js"></script>
+<script>
+
+
+	var Human = speculoos.Class({
+    /* nested class */
+    Hand:speculoos.Class({
+      constructor : function Hand (which_one) {
+          this.whichOne = which_one;
+      },
+      take : function(something) {
+          console.log("Take " + something + " with the " + this.whichOne +" hand");
+      }
+    }),
+
+		constructor : function Human (name) {
+			this.name = name;
+      this.leftHand = new this.Hand("left");
+      this.rightHand = new this.Hand("right");
+		},
+
+		toString : function() {
+			return "Hello " + this.name;
+		},
+		
+		sayHello : function() {
+			console.log("I'm "+this.name);
+		}
+
+	});
+
+	var bob = new Human('Bob');
+
+	bob.sayHello();
+  bob.leftHand.take("a book");
+  bob.rightHand.take("a glass");
+
+  /* === inheritance === */
+  var SuperHero = speculoos.Class({
+    extends : Human,
+    constructor : function SuperHero(name) {
+      SuperHero.super.constructor.call(this, name);
+    }
+  });
+
+  var clark = new SuperHero("SuperMan");
+  clark.sayHello();
+  clark.leftHand.take("a gun");
+  clark.rightHand.take("a knife");
+
+</script>
+
+
+</html>

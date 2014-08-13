@@ -104,11 +104,29 @@ You do not want to learn to coffeescript today, but it's interesting that your c
 	peter.sayHello();
 ```
 
+###Use with ECMAScript 6
+
+```javascript
+class SuperHero extends Human {
+  constructor(name, nickName) {
+    this.nickName = nickName;
+    super(name);
+  }
+
+  sayHello() {
+    super.sayHello();
+    console.log(`I am ${this.nickName}`);
+  }
+
+}
+var peter = new SuperHero("Peter Parker", "SpiderMan");
+peter.sayHello();
+```
+
+
 ... so simple ! No ? ...
 
 ##License
-
-
 
 SpeculOOs is available under the terms of the [MIT-License](http://en.wikipedia.org/wiki/MIT_License#License_terms).
 

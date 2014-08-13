@@ -1,0 +1,23 @@
+{
+  "name": "speculoos",
+  "version": "0.0.0",
+  "description": "Simple Javascript Class notation, CoffeeScript, TypeScript and ECMAScript 6 compliant",
+  "main": "speculoos.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k33g/speculoos"
+  },
+  "keywords": [
+    "class"
+  ],
+  "author": "k33g",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/k33g/speculoos/issues"
+  },
+  "homepage": "https://github.com/k33g/speculoos",
+  "dependencies": {
+    "typescript": "^1.0.1",
+    "traceur": "^0.0.56"
+  }
+}

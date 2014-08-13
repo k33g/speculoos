@@ -1,0 +1,14 @@
+{
+  "name": "speculoos",
+  "version": "0.0.0",
+  "homepage": "https://github.com/k33g/speculoos",
+  "authors": [
+    "k33g <ph.charriere@gmail.com>"
+  ],
+  "description": "Simple Javascript Class notation, CoffeeScript, TypeScript and ECMAScript 6 compliant",
+  "main": "speculoos.js",
+  "keywords": [
+    "class"
+  ],
+  "license": "MIT"
+}
