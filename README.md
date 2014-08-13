@@ -4,6 +4,10 @@ SpeculOOs is just a very simple Javascript Class notation, but ... CoffeeScript 
 
 You do not want to learn to coffeescript today, but it's interesting that your codes are compatible with coffeescript, if you finally decide to take the plunge. For example, your coffeescript classes will be able to inherit from your javascript classes
 
+##Install
+
+type `bower install k33g/speculoos#master`
+
 ##Use
 
 - declare `speculoos.js`, if browser : `<script src="speculoos.js"></script>`, if nodejs : `var speculoos = require("./speculoos.js");`
