@@ -65,7 +65,9 @@ bob.sayHello();
 
 ##Prepare Future
 
-###Use with Coffeescript
+... Just use `extends`
+
+###Use Speculoos Classes with Coffeescript
 
 ```coffeescript
 ### this is coffeescript ###
@@ -84,7 +86,7 @@ console.log superMan, superMan.toString(), SuperHero.getHumanCounter(), Human.Hu
 superMan.sayHello()
 ```
 
-###Use with TypeScript
+###Use Speculoos Classes with TypeScript
 
 ```typescript
 class SuperHero extends Human {
@@ -103,7 +105,7 @@ var peter = new SuperHero("Peter Parker", "SpiderMan");
 peter.sayHello();
 ```
 
-###Use with ECMAScript 6
+###Use Speculoos Classes with ECMAScript 6
 
 ```javascript
 class SuperHero extends Human {
